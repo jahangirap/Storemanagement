@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="Collected Product.htm" x="400" y="600" zoom="true"/>
+        <Node id="customerwisereport.jsp" x="1150" y="300" zoom="true"/>
+        <Node id="product.jsp" x="900" y="300" zoom="true"/>
+        <Node id="index.jsp" x="150" y="150" zoom="true"/>
+        <Node id="sales.jsp" x="1150" y="150" zoom="true"/>
+        <Node id="categoryupdate.jsp" x="400" y="300" zoom="true"/>
+        <Node id="Customerwiserepor.htm" x="900" y="450" zoom="true"/>
+        <Node id="collectedproducts.jsp" x="1400" y="150" zoom="true"/>
+        <Node id="categorydelete.jsp" x="150" y="300" zoom="true"/>
+        <Node id="Untitled-1.htm" x="650" y="450" zoom="true"/>
+        <Node id="categoryadd.jsp" x="150" y="450" zoom="true"/>
+        <Node id="distribution.jsp" x="650" y="600" zoom="true"/>
+        <Node id="accounts.jsp" x="400" y="450" zoom="true"/>
+        <Node id="purchase.jsp" x="150" y="600" zoom="true"/>
+        <Node id="logout.jsp" x="650" y="300" zoom="true"/>
+        <Node id="productadd1.jsp" x="150" y="750" zoom="true"/>
+        <Node id="category.jsp" x="400" y="150" zoom="true"/>
+        <Node id="welcome.jsp" x="650" y="150" zoom="true"/>
+        <Node id="productadd.jsp" x="900" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

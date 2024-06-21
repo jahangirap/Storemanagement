@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+DistributionBean
+<managed-bean>
+        <managed-bean-name>distributionBean</managed-bean-name>
+        <managed-bean-class>beans.DistributionBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+CollectedProductBean
+<managed-bean>
+        <managed-bean-name>collectedProductBean</managed-bean-name>
+        <managed-bean-class>beans.CollectedProductBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+ModelBean
+<managed-bean>
+       <managed-bean-name>modelBean</managed-bean-name>
+        <managed-bean-class>beans.ModelBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+</managed-bean> 
+
+CustomerViewBean
+<managed-bean>
+       <managed-bean-name>CustomerViewBean</managed-bean-name>
+        <managed-bean-class>beans.CustomerViewBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean> 
+    
+
+    
+ProductBean
+    <managed-bean>
+       <managed-bean-name>ProductBean</managed-bean-name>
+        <managed-bean-class>beans.ProductBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>  
+    
+   
+  CategoryBean
+    <managed-bean>
+       <managed-bean-name>CategoryBean</managed-bean-name>
+        <managed-bean-class>beans.CategoryBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>  
+    
+   
+    
+    
+  AdminBean
+    <managed-bean>
+        <managed-bean-name>AdminBean</managed-bean-name>
+        <managed-bean-class>beans.AdminBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>
+  
+  
+   
+    
+    <navigation-rule>
+        <from-view-id>/index.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/welcome.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

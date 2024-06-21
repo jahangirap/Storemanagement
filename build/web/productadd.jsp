@@ -1,0 +1,130 @@
+
+<%
+    if ((session.getAttribute("_username") == null) || (session.getAttribute("_username") == "")) {
+        response.sendRedirect("index.jsp");
+    }
+%>
+<%-- 
+    Document   : inde
+    Created on : Jul 22, 2012, 1:14:50 PM
+    Author     : Administrator
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://richfaces.org/a4j" prefix="a4j" %>
+<%@taglib uri="http://richfaces.org/rich" prefix="rich" %>
+<%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
+<%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+<%@ taglib uri="http://myfaces.apache.org/tomahawk" prefix="t" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The financial training institute of malta</title>
+
+
+<link rel="stylesheet" href="css/style_welcome.css" type="text/css" media="screen" />
+</head>
+
+<body>
+	<!--strat header -->
+    <div class="top-bar"></div>
+	<div class="header">
+    	
+    	<div class="header_middle">
+        	<!-- <div class="logo">
+           
+           <img src="images/logo.png" alt="logo" /> 
+            <span class="slogan">financial training institute of malta</span>
+            </div>-->
+          
+            	
+                
+               
+          
+        </div>
+            
+        <div class="clear"></div> 
+        
+    </div>
+      <div class="header-menu">
+                	<ul>
+                        <li><a href="logout.jsp">LogOut</a></li>
+                        <li><a href="accounts.jsp">Accounts</a></li>
+                        <li><a href="distribution.jsp">Distribution</a></li>
+                        <li><span class="active2 margin3">&nbsp;</span><a href="collectedproducts.jsp">Collected Products</a></li>
+                        <li><a href="productadd.jsp">Product</a></li>
+                    	<li><a href="category.jsp" >Category</a></li>
+                        
+                    </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="line_top"></div>
+    <!--end header -->
+    <!--start banner jquery image -->
+   <!-- <div class="banner-image-training">
+    	<div class="images"><img src="images/banner.jpg" alt="banner" height="190" width="953" /></div>
+    </div>  -->
+    <!--end banner jquery image -->
+    
+    <div class="clear"></div>
+    <span></span>
+    <div class="clear"></div>
+    <span></span>
+    <div class="bodycontent">
+    	<div class="content">
+            <h:form>
+             <h:panelGrid columns="2">
+
+                 <h:outputText value="Message:"/>
+                 <h:outputText value="#{ProductBean.msg}"/>
+                                            <h:outputText value="Category Name:"/>
+                                            
+                                           <rich:comboBox id="cat" value="#{ProductBean.catname}"  selectFirstOnUpdate="true" directInputSuggestions="true" defaultLabel="Select Category Name:">
+                                                <f:selectItems value="#{ProductBean.catValue}"/>
+                                                <a4j:support action="#{ProductBean.loadcat}" reRender="productname,desc" event="onchange" ajaxSingle="true"/>
+                                            </rich:comboBox>
+
+                                            <h:outputText value="Product Name:"/>
+                                            <rich:comboBox id="productname" value="#{ProductBean.productname}"  selectFirstOnUpdate="true" directInputSuggestions="true" defaultLabel="Select Category Name:">
+                                                <f:selectItems value="#{ProductBean.productValue}"/>
+                                                <a4j:support action="#{ProductBean.changeItem}" reRender="desc" event="onchange" ajaxSingle="true"/>
+                                            </rich:comboBox>
+                                           
+                                            <h:outputText value="Product Desc:"/>
+                                            <h:inputTextarea id="desc"  style="width:150px"  value="#{ProductBean.productdesc}"  />  
+
+                                           
+
+              </h:panelGrid><rich:spacer width="100px"/>
+                                        <h:commandButton value="Clear" action="#{ProductBean.clear}" /><rich:spacer width="15px"/>
+                                        <h:commandButton value="Insert" action="#{ProductBean.insert}" onclick="if (!confirm('Are you sure you want to insert this record?')) return false" /><rich:spacer width="15px"/>
+                                        </h:form>
+        </div>
+    	<div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+   
+    	<div class="clear"></div>
+    </div>
+    
+    
+    <div class="footer">
+    	<div class="footer-content">
+        	<div class="footer-left">
+            	<ul>
+                    <li><a href="#" class="separator"><img src="images/f-in.png" alt="f" border="0"  /></a></li>
+                    <li><a href="#" class="separator"> <img src="images/saga.png" alt="saga" border="0" /></a></li>
+                    <li><a href="#" class="separator"> <img src="images/egul.png" alt="egul" border="0"  /></a></li>
+                    <li><a href="#" > <img src="images/bni.png" alt="bni" border="0"  /></a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+            	<div class="right-top">COPYRIGHT &copy; 2014 BASIC ICT LTD<span class="separator">&nbsp;&nbsp;</span>&nbsp;&nbsp;<a href="#">PRIVACY POLICY</a></div>
+                <div class="right-bottom"><a href="#">SUPPORT BKIICT</a><span class="separator">&nbsp;&nbsp;</span>&nbsp&nbsp;<a href="#">BCC</a><span class="separator">&nbsp;&nbsp;</span>&nbsp;&nbsp;DESIGNED &amp; DEVELOPED BY MD. JAHANGIR ALAM, AP, BASIC ICT</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</f:view>
